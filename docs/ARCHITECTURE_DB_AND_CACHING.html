@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PocketBroker — Database & Serving Architecture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5EED9; --surface:#FFFFFF; --ink:#0D0D0D;
+    --pink:#FF3366; --teal:#00D4CC; --blue:#2B6BFF; --coral:#FF6B47; --neutral:#C4C4C4;
+    --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+    --head:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--head);
+       -webkit-font-smoothing:antialiased;padding:40px 28px 80px}
+  .wrap{max-width:1260px;margin:0 auto}
+
+  h1{font-family:var(--display);font-weight:800;text-transform:uppercase;
+     font-size:clamp(34px,5.5vw,60px);line-height:.95;letter-spacing:-.01em;margin:0 0 10px}
+  .sub{font-family:var(--mono);font-size:13px;margin:0 0 6px;max-width:74ch;line-height:1.6}
+  .meta{font-family:var(--mono);font-size:11px;color:#555;margin:0 0 40px}
+
+  h2{font-family:var(--display);font-weight:800;text-transform:uppercase;
+     font-size:30px;letter-spacing:.01em;margin:56px 0 6px;
+     border-bottom:3px solid var(--ink);padding-bottom:6px;display:flex;align-items:baseline;gap:12px}
+  h2 .n{background:var(--ink);color:var(--bg);font-size:19px;padding:2px 11px;flex:none}
+  .lede{font-family:var(--mono);font-size:12.5px;line-height:1.65;margin:12px 0 26px;max-width:82ch}
+
+  .card{background:var(--surface);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}
+
+  /* ---------- request path ---------- */
+  .rail{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:26px 0 8px;align-items:stretch}
+  .stage{background:var(--surface);border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);
+         padding:12px 12px 14px;position:relative;margin-right:16px}
+  .stage:last-child{margin-right:0}
+  .stage::after{content:"";position:absolute;top:50%;right:-17px;width:17px;height:3px;
+                background:var(--ink);transform:translateY(-50%)}
+  .stage:last-child::after{display:none}
+  .stage .tier{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+               display:inline-block;padding:2px 7px;border:2px solid var(--ink);margin-bottom:8px}
+  .stage h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:20px;
+            margin:0 0 3px;line-height:1}
+  .stage .where{font-family:var(--mono);font-size:10px;color:#444;margin:0 0 9px;word-break:break-all}
+  .stage ul{margin:0;padding:0;list-style:none}
+  .stage li{font-family:var(--mono);font-size:10.5px;line-height:1.5;padding:3px 0;border-top:1px solid #E4E4E4}
+  .stage li:first-child{border-top:0}
+  .t-browser .tier{background:var(--coral)} .t-nginx .tier{background:var(--neutral)}
+  .t-app .tier{background:var(--pink);color:#fff} .t-db .tier{background:var(--teal)}
+
+  .hit{display:inline-block;font-family:var(--mono);font-size:9px;font-weight:700;
+       padding:1px 5px;border:1.5px solid var(--ink);margin-left:4px;vertical-align:1px}
+  .hit.c{background:var(--coral)} .hit.p{background:var(--pink);color:#fff} .hit.t{background:var(--teal)}
+
+  /* ---------- invalidation ---------- */
+  .inval{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+  .inv{background:var(--surface);border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:13px 14px}
+  .inv h4{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:17px;margin:0 0 7px;
+          display:flex;align-items:center;gap:7px}
+  .inv h4 span{width:11px;height:11px;border:2px solid var(--ink);flex:none}
+  .inv p{font-family:var(--mono);font-size:10.5px;line-height:1.6;margin:0;color:#222}
+  .inv code{background:#F0F0F0;padding:1px 3px;border:1px solid #DDD;font-size:10px}
+
+  /* ---------- schema ---------- */
+  .clusters{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+  .cl{background:var(--surface);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);
+      padding:0;display:flex;flex-direction:column}
+  .cl.wide{grid-column:span 2}
+  .cl > header{border-bottom:2px solid var(--ink);padding:9px 13px;display:flex;
+               justify-content:space-between;align-items:baseline;gap:8px}
+  .cl > header b{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:19px;line-height:1}
+  .cl > header i{font-family:var(--mono);font-size:9.5px;font-style:normal;color:#444}
+  .cl .body{padding:12px 13px 14px;flex:1}
+  .c-geo > header{background:var(--teal)} .c-env > header{background:#BFF0EE}
+  .c-graph > header{background:var(--pink);color:#fff}
+  .c-graph > header i{color:#FFE0E8}
+  .c-proj > header{background:var(--coral)} .c-app > header{background:var(--blue);color:#fff}
+  .c-app > header i{color:#D6E2FF}
+  .c-macro > header{background:var(--neutral)}
+
+  table.tb{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:10.5px}
+  table.tb td{padding:4px 0;vertical-align:top;border-top:1px solid #EAEAEA}
+  table.tb tr:first-child td{border-top:0}
+  table.tb .nm{font-weight:700;white-space:nowrap;padding-right:9px}
+  table.tb .co{color:#555;line-height:1.5}
+  .pk{color:var(--blue);font-weight:700}
+  .fk{color:var(--pink);font-weight:700}
+  .note{font-family:var(--mono);font-size:10px;line-height:1.6;color:#333;
+        margin:11px 0 0;padding-top:9px;border-top:2px dotted var(--ink)}
+
+  .legend{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0 0;font-family:var(--mono);font-size:10.5px}
+  .legend span{display:flex;align-items:center;gap:6px}
+  .sw{width:13px;height:13px;border:2px solid var(--ink);flex:none}
+
+  .callout{border:2px solid var(--ink);background:#FFF;box-shadow:6px 6px 0 var(--ink);
+           padding:16px 18px;margin-top:30px}
+  .callout b{font-family:var(--display);text-transform:uppercase;font-size:19px;letter-spacing:.01em}
+  .callout p{font-family:var(--mono);font-size:11.5px;line-height:1.7;margin:8px 0 0}
+
+  @media (max-width:960px){
+    .rail,.clusters,.inval{grid-template-columns:1fr}
+    .cl.wide{grid-column:span 1}
+    .stage{margin:0 0 22px}
+    .stage::after{top:auto;bottom:-19px;right:50%;width:3px;height:19px;transform:translateX(50%)}
+  }
+  @media print{
+    body{background:#fff;padding:0}
+    .card,.cl,.stage,.inv,.callout{box-shadow:3px 3px 0 var(--ink)}
+    h2{break-after:avoid} .cl{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Database &amp;<br>Serving Architecture</h1>
+  <p class="sub">PocketBroker — Bulgarian real-estate &amp; developer intelligence. How the 24-table Postgres schema is
+     laid out, and how a request reaches it through three independent cache tiers.</p>
+  <p class="meta">Generated from <code>backend/app/models.py</code>, <code>backend/app/routes.py</code>,
+     <code>frontend/src/lib/graphCache.js</code>, <code>deploy/pocketbroker-api.service</code>, <code>deploy/SETUP.md</code></p>
+
+  <!-- ============ 1. REQUEST PATH ============ -->
+  <h2><span class="n">1</span> Request path &amp; cache tiers</h2>
+  <p class="lede">
+    There is no Redis and no external cache server. Caching happens at three independent layers, each with a different
+    lifetime and a different reason to exist. A request only reaches Postgres if all three miss.
+  </p>
+
+  <div class="rail">
+
+    <div class="stage t-browser">
+      <span class="tier">Tier 1 · browser</span>
+      <h3>Vue 3 SPA</h3>
+      <p class="where">sessionStorage</p>
+      <ul>
+        <li><b>pb:graph:v1</b> — ~1&nbsp;MB ownership graph <span class="hit c">30 min TTL</span></li>
+        <li><b>pb:graphpos:v1</b> — settled node coordinates, so the constellation redraws instantly</li>
+        <li>sessionStorage, not localStorage: survives refresh, dies with the tab, never writes the people graph to disk</li>
+        <li>Quota errors are swallowed — caching is skipped, behaviour is unchanged</li>
+      </ul>
+    </div>
+
+    <div class="stage t-nginx">
+      <span class="tier">Edge</span>
+      <h3>nginx</h3>
+      <p class="where">:443 → TLS (certbot)</p>
+      <ul>
+        <li><code>/</code> → <b>/var/www/pocketbroker</b> static SPA bundle</li>
+        <li><code>try_files $uri $uri/ /index.html</code> — real files win; unknown paths fall back to the SPA router</li>
+        <li><code>/api/</code> → reverse proxy to <b>127.0.0.1:8000</b></li>
+        <li>Serves <code>sitemap.xml</code> / <code>robots.txt</code> straight off disk</li>
+      </ul>
+    </div>
+
+    <div class="stage t-app">
+      <span class="tier">Tier 2 · process</span>
+      <h3>FastAPI</h3>
+      <p class="where">uvicorn · systemd <b>pocketbroker-api</b> · bound 127.0.0.1 only</p>
+      <ul>
+        <li><b>_cities_cache</b> — single list <span class="hit p">∞</span></li>
+        <li><b>_map_cache{city}</b> — per city slug <span class="hit p">∞</span></li>
+        <li><b>_entities_cache</b> — pre-sorted browse rows, so type-ahead never hits the DB</li>
+        <li><b>_entity_signal_counts_cache</b> — id → tier counts, bulk-computed in 2 queries</li>
+        <li><b>_graph_cache{limit}</b> — ~250 ms of DB work each; <b>bounded at 4</b>, evicts oldest-first</li>
+      </ul>
+    </div>
+
+    <div class="stage t-app">
+      <span class="tier">ORM</span>
+      <h3>SQLAlchemy 2</h3>
+      <p class="where">Mapped[] / declarative · Alembic migrations</p>
+      <ul>
+        <li>Session per request via <code>Depends(get_session)</code></li>
+        <li>Auth gate sits <b>outside</b> the cache — anonymous callers get 401, never a cached body</li>
+        <li>Depth-bounded traversal computes indirect ownership paths at query time</li>
+      </ul>
+    </div>
+
+    <div class="stage t-db">
+      <span class="tier">Tier 3 · store</span>
+      <h3>PostgreSQL</h3>
+      <p class="where">bg_realestate · 24 tables</p>
+      <ul>
+        <li>Only reached on a full three-tier miss</li>
+        <li>Written exclusively by the ETL — never by a crawler</li>
+        <li>Postgres runs its own buffer cache underneath all of this</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 style="font-size:22px;border-bottom-width:2px;margin-top:44px"><span class="n" style="font-size:15px">1b</span> How each tier is invalidated</h2>
+  <div class="inval">
+    <div class="inv">
+      <h4><span style="background:var(--coral)"></span> Browser</h4>
+      <p>Expires on its own after <b>30 min</b>. Also dropped immediately by
+         <code>authStore.setToken()</code> on <b>any</b> token change — login, logout, or a token the server
+         rejected — because the graph is login-gated people data that must not outlive its session.
+         Bump <code>:v1</code> when the payload shape changes.</p>
+    </div>
+    <div class="inv">
+      <h4><span style="background:var(--pink)"></span> Process</h4>
+      <p><code>POST /api/admin/refresh-cache</code> calls <code>clear_caches()</code> and drops all five at once.
+         Guarded by the <code>ADMIN_TOKEN</code> env var and <b>fails closed</b> when it is unset, so it can
+         never be hit on a misconfigured deploy. This is the no-redeploy path after an ETL run.</p>
+    </div>
+    <div class="inv">
+      <h4><span style="background:var(--neutral)"></span> Restart</h4>
+      <p>The caches are plain module-level dicts, so <code>systemctl restart pocketbroker-api</code> clears
+         everything by definition — and the deploy already restarts. That makes the correctness floor
+         "a deploy fixes it", with the admin endpoint as the fast path.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <b>The trade-off worth naming</b>
+    <p>A single uvicorn process means a single shared cache — no cross-worker coherency problem, and no Redis to
+       operate. The cost is that the cache is <i>per process</i>: scaling to multiple workers would need the cache
+       moved out, or each worker warms its own copy. That is an acceptable trade at this traffic level, and it is
+       deliberate rather than accidental — the data is refreshed monthly by ETL, not continuously by users, so
+       an unbounded TTL with explicit invalidation is the right shape. The one cache keyed by caller-supplied
+       input (<code>_graph_cache</code>, keyed by <code>limit</code> ∈ 1..2000, ~1 MB per entry) is explicitly
+       bounded at 4 entries, because otherwise walking the limit range would pin gigabytes.</p>
+  </div>
+
+  <!-- ============ 2. SCHEMA ============ -->
+  <h2><span class="n">2</span> The schema — 24 tables, 6 clusters</h2>
+  <p class="lede">
+    Crawlers never touch Postgres. They append dated JSONL into <code>data/raw/</code>; the ETL in
+    <code>backend/etl/</code> normalises and upserts from there. That keeps every scrape replayable — the whole
+    database can be rebuilt without re-crawling.
+  </p>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--blue)"></i> primary key</span>
+    <span><i class="sw" style="background:var(--pink)"></i> foreign key</span>
+    <span><i class="sw" style="background:var(--teal)"></i> geo &amp; market</span>
+    <span><i class="sw" style="background:var(--coral)"></i> projects</span>
+    <span><i class="sw" style="background:#FFF"></i> 28,019 price records · 305 projects · 31 years of history on disk</span>
+  </div>
+
+  <div class="clusters">
+
+    <div class="cl c-geo">
+      <header><b>Geo &amp; market</b><i>the price spine</i></header>
+      <div class="body">
+        <table class="tb">
+          <tr><td class="nm">city</td><td class="co"><span class="pk">id</span>, name, slug</td></tr>
+          <tr><td class="nm">neighbourhood</td><td class="co"><span class="pk">id</span>, <span class="fk">city_id</span>, name, slug, district, lat, lon, coord_source</td></tr>
+          <tr><td class="nm">price_snapshot</td><td class="co"><span class="pk">id</span>, <span class="fk">neighbourhood_id</span>, source, property_type, <b>transaction_type</b>, price_eur, price_eur_sqm, overall_avg_eur_sqm, period_date, scraped_at</td></tr>
+          <tr><td class="nm">metro_station</td><td class="co"><span class="pk">id</span>, name, line, lat, lon, sequence</td></tr>
+          <tr><td class="nm">neighbourhood_metro</td><td class="co"><span class="fk">neighbourhood_id</span> + <span class="fk">station_id</span> (composite PK), distance_m</td></tr>
+        </table>
+        <p class="note"><b>city → neighbourhood → price_snapshot</b> is the backbone. One row per
+           neighbourhood × property type × month × <b>sale/rent</b>, across 4 cities and 31 years of October snapshots.
+           <code>neighbourhood_metro</code> is a join table precomputed by distance, so proximity is never
+           calculated at request time.</p>
+      </div>
+    </div>
+
+    <div class="cl c-env">
+      <header><b>Environment</b><i>air quality</i></header>
+      <div class="body">
+        <table class="tb">
+          <tr><td class="nm">air_quality_station</td><td class="co"><span class="pk">id</span>, <span class="fk">city_id</span>, name, source, lat, lon, external_id</td></tr>
+          <tr><td class="nm">air_quality_snapshot</td><td class="co"><span class="pk">id</span>, <span class="fk">station_id</span>, year, pm25_annual_avg, aqi_annual_avg</td></tr>
+          <tr><td class="nm">neighbourhood_air_station</td><td class="co"><span class="fk">neighbourhood_id</span> + <span class="fk">station_id</span>, distance_m</td></tr>
+          <tr><td class="nm">neighbourhood_air</td><td class="co"><span class="pk">id</span>, <span class="fk">neighbourhood_id</span>, year, <b>season</b>, pm25_avg, aqi_avg, sensor_count</td></tr>
+        </table>
+        <p class="note">Same shape as the metro cluster: raw station readings, a distance join table, then
+           <code>neighbourhood_air</code> as a <b>materialised roll-up</b> per neighbourhood/year/season — so the
+           map bubbles read one indexed table instead of aggregating sensors live.</p>
+      </div>
+    </div>
+
+    <div class="cl c-macro">
+      <header><b>Macro</b><i>reference series</i></header>
+      <div class="body">
+        <table class="tb">
+          <tr><td class="nm">gold_price</td><td class="co"><span class="pk">id</span>, period_date, price_eur_per_gram, source</td></tr>
+          <tr><td class="nm">min_wage</td><td class="co"><span class="pk">id</span>, year, amount_bgn, amount_eur, source</td></tr>
+        </table>
+        <p class="note">Deliberately unlinked — no FKs. These are independent time series used to deflate
+           nominal prices, letting a chart answer "is property actually more expensive, or is money just worth less?"</p>
+      </div>
+    </div>
+
+    <div class="cl c-graph wide">
+      <header><b>Developer graph</b><i>the centrepiece — a self-referential ownership network</i></header>
+      <div class="body">
+        <table class="tb">
+          <tr><td class="nm">entity</td><td class="co"><span class="pk">id</span>, <b>kind</b> ('company' | 'person'), eik <i>(unique)</i>, name, name_normalized, slug, person_key, is_builder, legal_form, status, address, capital_bgn, founded_year, has_seizure &nbsp;— <b>25 cols</b></td></tr>
+          <tr><td class="nm">entity_edge</td><td class="co"><span class="pk">id</span>, <span class="fk">src_entity_id</span> → entity, <span class="fk">dst_entity_id</span> → entity, <b>relation</b> ('ownership' | 'management'), share_pct, role, valid_from, valid_to, is_current, source &nbsp;— <i>unique(src, dst, relation, valid_from)</i></td></tr>
+          <tr><td class="nm">entity_signal</td><td class="co"><span class="pk">id</span>, <span class="fk">entity_id</span>, subject_kind, matched_name, matched_eik, matched_person_key, source_type, <b>tier</b>, match_confidence, title, snippet, url, source_site, observed_date &nbsp;— <i>unique(url, matched_name)</i></td></tr>
+          <tr><td class="nm">builder</td><td class="co"><span class="pk">id</span>, <b><span class="fk">entity_id</span> → entity</b> <i>(1:1)</i>, eik <i>(unique)</i>, name, <span class="fk">hq_city_id</span>, capital_bgn, financials, ksb_category, ksb_active, insolvency_flag, tax_debt_bgn, last_checked_at</td></tr>
+        </table>
+        <p class="note">
+          <b>One table holds both companies and people.</b> Companies key on <code>eik</code> (the Bulgarian
+          company number); people have no national id, so they key on a derived, deterministic
+          <code>person_key</code>. That single choice is what makes the graph work: <code>entity_edge</code> is a
+          <b>self-referential</b> edge table, so "person owns company owns company" is the same query shape at every
+          hop. Only <b>direct</b> edges are stored — indirect links are graph paths computed by a depth-bounded
+          traversal, so no denormalised closure table can drift.
+          <br><br>
+          <code>entity_signal</code> is evidence attached to a node — a court act, a registry flag, a forum post —
+          carrying a <b>tier</b> and a <b>match_confidence</b>, because a name match is not proof of identity.
+          The unique constraint on <code>(url, matched_name)</code> is what stops one court act, which may name many
+          companies, from being written once per entity and double-counted.
+          <br><br>
+          <code>builder</code> is an <b>extension row</b>, not a duplicate: a builder is an <code>entity</code> of
+          kind <code>company</code> with <code>is_builder</code> set, joined 1:1 through
+          <code>builder.entity_id</code>. It carries only the rich profile fields — КСБ licence, insolvency flag,
+          tax debt, financials — that would otherwise sit null on every person row in <code>entity</code>.
+        </p>
+      </div>
+    </div>
+
+    <div class="cl c-proj">
+      <header><b>Projects</b><i>new buildings</i></header>
+      <div class="body">
+        <table class="tb">
+          <tr><td class="nm">new_building</td><td class="co"><span class="pk">id</span>, <span class="fk">city_id</span>, <span class="fk">neighbourhood_id</span>, <b>canonical_key</b>, name, <span class="fk">developer_id</span> → builder, developer_name, akt_stage, completion_year, floors, materials, price_eur_sqm, area_min/max_sqm</td></tr>
+          <tr><td class="nm">new_building_source</td><td class="co"><span class="pk">id</span>, <span class="fk">new_building_id</span>, site, source_name, url, price_eur_sqm, scraped_at</td></tr>
+          <tr><td class="nm">crawl_run</td><td class="co"><span class="pk">id</span>, domain, site, scope, <span class="fk">city_id</span>, pages_fetched, bytes_downloaded, records_parsed, records_emitted, errors, duration_s, started_at</td></tr>
+        </table>
+        <p class="note">The same development is listed on several portals under slightly different names, so
+           <code>canonical_key</code> deduplicates it into <b>one</b> <code>new_building</code> row and each portal's
+           listing is kept as a <code>new_building_source</code> child — preserving per-site prices and the
+           evidence trail. <code>developer_id</code> is the join into the ownership graph: from a building you reach
+           the developer, its owners, and their court signals.
+           <br><br><code>crawl_run</code> is observability, not data — every scrape logs pages, bytes, parse/emit
+           counts and errors, so a silently-failing crawler shows up as a run that emitted zero.</p>
+      </div>
+    </div>
+
+    <div class="cl c-app">
+      <header><b>App &amp; auth</b><i>users, orders, sync</i></header>
+      <div class="body">
+        <table class="tb">
+          <tr><td class="nm">user</td><td class="co"><span class="pk">id</span>, email, hashed_password, is_active, is_superuser <i>(fastapi-users)</i></td></tr>
+          <tr><td class="nm">oauth_account</td><td class="co"><span class="pk">id</span>, <span class="fk">user_id</span> — Google OAuth link</td></tr>
+          <tr><td class="nm">research_request</td><td class="co"><span class="pk">id</span>, company_name, company_eik, owner, <span class="fk">user_id</span>, status, order_type, scope, search_type, network_depth &nbsp;— <b>21 cols</b></td></tr>
+          <tr><td class="nm">court_check</td><td class="co"><span class="pk">id</span>, eik, name, method, acts_found, source_site, checked_at</td></tr>
+          <tr><td class="nm">sync_log</td><td class="co"><span class="pk">id</span>, <span class="fk">request_id</span>, action, <b>dry_run</b>, summary, created_at</td></tr>
+        </table>
+        <p class="note"><code>court_check</code> records that a check <i>ran</i> and what it found — including
+           <b>zero</b> results. Without it, "no court acts" and "never looked" are indistinguishable.
+           <code>sync_log</code> audits the local→prod research push, and its <code>dry_run</code> flag reflects
+           that the push tool defaults to dry-run.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="callout" style="margin-top:34px">
+    <b>Reading the whole thing in one sentence</b>
+    <p>Public sources → crawlers → append-only JSONL → ETL → 24-table Postgres, where a
+       <b>self-referential entity graph</b> links people to companies to buildings to court records; served by
+       FastAPI behind nginx, with an in-process cache that turns the two expensive endpoints
+       (<code>/map</code>, <code>/graph</code>) into dictionary lookups and is invalidated explicitly after
+       each ETL run.</p>
+  </div>
+
+</div>
+</body>
+</html>
