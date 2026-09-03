@@ -1,0 +1,296 @@
+{
+  "asenovgradsko-shose": {
+    "name": "Асеновградско шосе",
+    "lat": 42.0698408,
+    "lon": 24.8119825,
+    "source": "nominatim",
+    "verified": true
+  },
+  "belomorski": {
+    "name": "Беломорски",
+    "lat": 42.1109638,
+    "lon": 24.7389208,
+    "source": "nominatim",
+    "verified": true
+  },
+  "brezovsko-shose": {
+    "name": "Брезовско шосе",
+    "lat": 42.1723695,
+    "lon": 24.7551193,
+    "source": "nominatim",
+    "verified": true
+  },
+  "filipovo": {
+    "name": "Филипово",
+    "lat": 42.1643921,
+    "lon": 24.7401118,
+    "source": "nominatim",
+    "verified": true
+  },
+  "gagarin": {
+    "name": "Гагарин",
+    "lat": 42.1601935,
+    "lon": 24.7569887,
+    "source": "nominatim",
+    "verified": true
+  },
+  "gladno-pole": {
+    "name": "Гладно поле",
+    "lat": 42.1439415,
+    "lon": 24.7729875,
+    "source": "nominatim",
+    "verified": true
+  },
+  "hristo-smirnenski": {
+    "name": "Христо Смирненски",
+    "lat": 42.1316822,
+    "lon": 24.7076363,
+    "source": "nominatim",
+    "verified": true
+  },
+  "industrialna-zona-iztok": {
+    "name": "Индустриална зона - Изток",
+    "lat": 42.1949,
+    "lon": 24.6525082,
+    "source": "nominatim",
+    "verified": true
+  },
+  "industrialna-zona-maritsa": {
+    "name": "Индустриална зона - Марица",
+    "lat": 42.1949,
+    "lon": 24.6525082,
+    "source": "nominatim",
+    "verified": true
+  },
+  "industrialna-zona-sever": {
+    "name": "Индустриална зона - Север",
+    "lat": 42.1949,
+    "lon": 24.6525082,
+    "source": "nominatim",
+    "verified": true
+  },
+  "industrialna-zona-trakiya": {
+    "name": "Индустриална зона - Тракия",
+    "lat": 42.1949,
+    "lon": 24.6525082,
+    "source": "nominatim",
+    "verified": true
+  },
+  "izgrev": {
+    "name": "Изгрев",
+    "lat": 42.1520377,
+    "lon": 24.7910724,
+    "source": "nominatim",
+    "verified": true
+  },
+  "iztochna-daga": {
+    "name": "Източна дъга",
+    "lat": 42.14842,
+    "lon": 24.7574,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "kamenitsa-1": {
+    "name": "Каменица 1",
+    "lat": 42.1442724,
+    "lon": 24.7656651,
+    "source": "nominatim",
+    "verified": true
+  },
+  "kamenitsa-2": {
+    "name": "Каменица 2",
+    "lat": 42.1439967,
+    "lon": 24.7590687,
+    "source": "nominatim",
+    "verified": true
+  },
+  "kapana": {
+    "name": "Капана",
+    "lat": 42.1492729,
+    "lon": 24.7489093,
+    "source": "nominatim",
+    "verified": true
+  },
+  "karlovsko-shose": {
+    "name": "Карловско шосе",
+    "lat": 42.2068859,
+    "lon": 24.7332549,
+    "source": "nominatim",
+    "verified": true
+  },
+  "karshiyaka": {
+    "name": "Кършияка",
+    "lat": 42.1576443,
+    "lon": 24.745597,
+    "source": "nominatim",
+    "verified": true
+  },
+  "komatevo": {
+    "name": "Коматево",
+    "lat": 42.1011093,
+    "lon": 24.7032019,
+    "source": "nominatim",
+    "verified": true
+  },
+  "komatevski-vazel": {
+    "name": "Коматевски възел",
+    "lat": 42.14646,
+    "lon": 24.72002,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "komatevsko-shose": {
+    "name": "Коматевско шосе",
+    "lat": 42.0928859,
+    "lon": 24.6942756,
+    "source": "nominatim",
+    "verified": true
+  },
+  "kuklensko-shose": {
+    "name": "Кукленско шосе",
+    "lat": 42.1076398,
+    "lon": 24.7599934,
+    "source": "nominatim",
+    "verified": true
+  },
+  "kyuchuk-parizh": {
+    "name": "Кючук Париж",
+    "lat": 42.1266712,
+    "lon": 24.7476431,
+    "source": "nominatim",
+    "verified": true
+  },
+  "marasha": {
+    "name": "Мараша",
+    "lat": 42.1505806,
+    "lon": 24.7361387,
+    "source": "nominatim",
+    "verified": true
+  },
+  "mladezhki-halm": {
+    "name": "Младежки Хълм",
+    "lat": 42.1369292,
+    "lon": 24.731963,
+    "source": "nominatim",
+    "verified": true
+  },
+  "ostromila": {
+    "name": "Остромила",
+    "lat": 42.1139947,
+    "lon": 24.7280912,
+    "source": "nominatim",
+    "verified": true
+  },
+  "otdih-i-kultura": {
+    "name": "Отдих и култура",
+    "lat": 42.1438183,
+    "lon": 24.7108188,
+    "source": "nominatim",
+    "verified": true
+  },
+  "pazardzhishko-shose": {
+    "name": "Пазарджишко шосе",
+    "lat": 42.1265,
+    "lon": 24.72026,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "peshtersko-shose": {
+    "name": "Пещерско шосе",
+    "lat": 42.1396407,
+    "lon": 24.7287255,
+    "source": "nominatim",
+    "verified": true
+  },
+  "proslav": {
+    "name": "Прослав",
+    "lat": 42.1217512,
+    "lon": 24.6870094,
+    "source": "nominatim",
+    "verified": true
+  },
+  "sadiyski": {
+    "name": "Съдийски",
+    "lat": 42.1324994,
+    "lon": 24.7626705,
+    "source": "nominatim",
+    "verified": true
+  },
+  "stariyat-grad": {
+    "name": "Старият град",
+    "lat": 42.15906,
+    "lon": 24.77906,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "stochna-gara": {
+    "name": "Сточна гара",
+    "lat": 42.1362918,
+    "lon": 24.7511139,
+    "source": "nominatim",
+    "verified": true
+  },
+  "terziite": {
+    "name": "Терзиите",
+    "lat": 42.1222023,
+    "lon": 24.697317,
+    "source": "nominatim",
+    "verified": true
+  },
+  "trakiya": {
+    "name": "Тракия",
+    "lat": 42.1357225,
+    "lon": 24.7924932,
+    "source": "nominatim",
+    "verified": true
+  },
+  "tsarigradsko-shose": {
+    "name": "Цариградско шосе",
+    "lat": 42.1471317,
+    "lon": 24.7639689,
+    "source": "nominatim",
+    "verified": true
+  },
+  "tsentar": {
+    "name": "Център",
+    "lat": 42.1580927,
+    "lon": 24.7325802,
+    "source": "nominatim",
+    "verified": true
+  },
+  "tsentralna-gara": {
+    "name": "Централна гара",
+    "lat": 42.1349069,
+    "lon": 24.7414166,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vastanicheski": {
+    "name": "Въстанически",
+    "lat": 42.1237495,
+    "lon": 24.7326946,
+    "source": "nominatim",
+    "verified": true
+  },
+  "yuzhen": {
+    "name": "Южен",
+    "lat": 42.1125885,
+    "lon": 24.7330936,
+    "source": "nominatim",
+    "verified": true
+  },
+  "zaharna-fabrika": {
+    "name": "Захарна фабрика",
+    "lat": 42.1590677,
+    "lon": 24.727713,
+    "source": "nominatim",
+    "verified": true
+  },
+  "zapaden": {
+    "name": "Западен",
+    "lat": 42.122158,
+    "lon": 24.6847643,
+    "source": "nominatim",
+    "verified": true
+  }
+}

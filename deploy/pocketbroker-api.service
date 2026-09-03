@@ -1,0 +1,24 @@
+# PocketBroker API — BG Real Estate Intel (FastAPI/uvicorn).
+# Install:
+#   sudo cp /home/deploy/projects/bg-realestate-intel/deploy/pocketbroker-api.service \
+#           /etc/systemd/system/pocketbroker-api.service
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now pocketbroker-api
+# Bound to 127.0.0.1 only — reachable solely via the nginx /api/ proxy.
+[Unit]
+Description=PocketBroker API (BG Real Estate Intel — FastAPI)
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=mvp
+WorkingDirectory=/home/deploy/projects/bg-realestate-intel/backend
+Environment=HOME=/home/deploy
+EnvironmentFile=/home/deploy/secrets/pocketbroker.env
+ExecStart=/home/deploy/projects/bg-realestate-intel/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

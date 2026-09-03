@@ -1,0 +1,4 @@
+{"uid": 8574, "lat": 42.52, "lon": 27.448, "city": "burgas", "source": "citizen", "year": 2025, "season": "winter", "pm25": 15.98, "aqi": 59.0}
+{"uid": 53351, "lat": 42.4951455412, "lon": 27.46076971292, "city": "burgas", "source": "citizen", "year": 2025, "season": "winter", "pm25": 1.93, "aqi": 8.0}
+{"uid": 8574, "lat": 42.52, "lon": 27.448, "city": "burgas", "source": "citizen", "year": 2025, "season": "summer", "pm25": 10.42, "aqi": 43.0}
+{"uid": 53351, "lat": 42.4951455412, "lon": 27.46076971292, "city": "burgas", "source": "citizen", "year": 2025, "season": "summer", "pm25": 2.19, "aqi": 9.0}

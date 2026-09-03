@@ -1,0 +1,79 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+
+# Node / frontend (Phase 2)
+node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+
+# Local pytest sqlite db (created by running the backend test suite).
+backend/test.db
+
+# Data — public market data (imot.bg prices, gold) stays tracked; exclude temps
+data/raw/transport/*.tmp.json
+# Crawler run logs — disposable operational output, not source data.
+data/raw/imot_bg/*.log
+data/raw/transport/*.log
+
+# Private scraped datasets (ownership/builders incl. personal names + ЕИКs).
+# Back these up separately — never commit to git.
+/data/raw/ownership/
+/data/raw/builders/
+/data/normalized/
+/data/stats/
+/data/seed_eiks_builders.txt
+/data/seed_persons_depth2.tsv
+/data/seed_jojoba_persons.tsv
+/data/seed_jojoba_eiks.txt
+# Signals: registry/web/forum scrapes incl. personal names, ЕИКs + court cases.
+/data/raw/signals/
+# Scraper test fixtures are real saved papagal pages (PII) — keep private.
+crawlers/scraper_kit/tests/fixtures/
+# Scratch working dir for new-building scraper recon (diagnostic scripts + dumps).
+/data/fixtures/
+
+# Database dumps (full DB incl. private ownership/builder PII) — never commit.
+# Keep the folder, ignore its contents. See deploy/db_push.sh.
+/db/dumps/*
+!/db/dumps/.gitkeep
+# Same rule, for dumps pulled straight into the repo root (pg_dump default
+# lands them here, outside /db/dumps — they carry user emails + password hashes).
+/*.sql
+
+# Local Claude Code config (per-machine settings + scheduler lock).
+.claude/
+
+# Local verification screenshots & browser-MCP scratch
+/.playwright-mcp/
+/*.png
+/design/Screenshot*.png
+
+# Captcha images — scratch from court-check / EIK lookups. Keep folder, ignore contents.
+/captcha/*
+!/captcha/.gitkeep
+
+# Stray Playwright snapshot dump (contains court/PII) — never commit
+/act.yml
+
+# Working scratch / private research exports — never commit (court acts incl. EIKs,
+# company requests incl. live user emails, research notes, generated report PDFs).
+/acts_full.json
+/acts_pdf_b64.json
+/company_requests_*.csv
+/company_research_*.md
+/report_*.pdf
+
+# Research bundles carry named individuals + court data — never commit.
+/data/bundles/*
+!/data/bundles/.gitkeep

@@ -1,0 +1,30 @@
+/* Neo-Memphis design system — see CLAUDE.md / HANDOVER.md §3 */
+:root {
+  /* Colour */
+  --bg: #f5eed9; /* cream */
+  --surface: #ffffff; /* cards */
+  --surface-muted: #e7e3d6; /* muted reference cards (e.g. healthy benchmark) */
+  --ink: #0d0d0d; /* border + text */
+  --pink: #ff3366; /* primary accent — CTAs, active, bubbles */
+  --teal: #00d4cc; /* secondary accent */
+  --blue: #2b6bff; /* metro M1 */
+  --coral: #ff6b47; /* stat tile accent */
+  --neutral: #c4c4c4; /* non-highlighted bubble */
+  --village: #a36b6b; /* out-of-city (village/town) bubble — muted brick-red */
+
+  /* Strokes + shadows (hard, geometric — never soft) */
+  --stroke: 2px solid var(--ink);
+  --stroke-thick: 3px solid var(--ink);
+  --shadow: 4px 4px 0 0 var(--ink);
+  --shadow-lg: 6px 6px 0 0 var(--ink);
+
+  /* Type */
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-head: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius: 0px; /* sharp corners */
+  --sidebar-w: 240px;
+  --panel-w: 360px;
+  --mhead-h: 56px; /* mobile fixed header (hamburger bar) */
+}

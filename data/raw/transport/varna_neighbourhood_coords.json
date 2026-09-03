@@ -1,0 +1,499 @@
+{
+  "asparuhovo": {
+    "name": "Аспарухово",
+    "lat": 43.1552161,
+    "lon": 27.8977449,
+    "source": "nominatim",
+    "verified": true
+  },
+  "avtogara": {
+    "name": "Автогара",
+    "lat": 43.2154989,
+    "lon": 27.8970173,
+    "source": "nominatim",
+    "verified": true
+  },
+  "bazar-levski": {
+    "name": "Базар Левски",
+    "lat": 43.220132,
+    "lon": 27.9309001,
+    "source": "nominatim",
+    "verified": true
+  },
+  "biznes-hotel": {
+    "name": "Бизнес хотел",
+    "lat": 43.2037174,
+    "lon": 27.9059229,
+    "source": "nominatim",
+    "verified": true
+  },
+  "briz": {
+    "name": "Бриз",
+    "lat": 43.295994,
+    "lon": 28.0438948,
+    "source": "nominatim",
+    "verified": true
+  },
+  "chataldzha": {
+    "name": "Чаталджа",
+    "lat": 43.2121455,
+    "lon": 27.9235934,
+    "source": "nominatim",
+    "verified": true
+  },
+  "chayka": {
+    "name": "Чайка",
+    "lat": 43.2547343,
+    "lon": 28.0283004,
+    "source": "nominatim",
+    "verified": true
+  },
+  "festivalen-kompleks": {
+    "name": "Фестивален комплекс",
+    "lat": 43.2031514,
+    "lon": 27.9214445,
+    "source": "nominatim",
+    "verified": true
+  },
+  "galata": {
+    "name": "Галата",
+    "lat": 43.1649656,
+    "lon": 27.937909,
+    "source": "nominatim",
+    "verified": true
+  },
+  "grand-mol": {
+    "name": "Гранд Мол",
+    "lat": 43.2173398,
+    "lon": 27.8984633,
+    "source": "nominatim",
+    "verified": true
+  },
+  "gratska-mahala": {
+    "name": "Гръцка махала",
+    "lat": 43.20808,
+    "lon": 27.906399999999998,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "hei": {
+    "name": "ХЕИ",
+    "lat": 43.2205235,
+    "lon": 27.9169859,
+    "source": "nominatim",
+    "verified": true
+  },
+  "hristo-botev": {
+    "name": "Христо Ботев",
+    "lat": 43.2484626,
+    "lon": 27.9060579,
+    "source": "nominatim",
+    "verified": true
+  },
+  "izgrev": {
+    "name": "Изгрев",
+    "lat": 43.2153333,
+    "lon": 27.9007135,
+    "source": "nominatim",
+    "verified": true
+  },
+  "k-k-chayka": {
+    "name": "к.к. Чайка",
+    "lat": 43.2713396,
+    "lon": 28.0286022,
+    "source": "nominatim",
+    "verified": true
+  },
+  "k-k-slanchev-den": {
+    "name": "к.к. Слънчев ден",
+    "lat": 43.18888,
+    "lon": 27.937359999999998,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "k-k-sv-sv-konstantin-i-elena": {
+    "name": "к.к. Св.Св. Константин и Елена",
+    "lat": 43.20668,
+    "lon": 27.89104,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "k-k-zlatni-pyasatsi": {
+    "name": "к.к. Златни пясъци",
+    "lat": 43.19596,
+    "lon": 27.881919999999997,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "kaysieva-gradina": {
+    "name": "Кайсиева градина",
+    "lat": 43.2367995,
+    "lon": 27.8571511,
+    "source": "nominatim",
+    "verified": true
+  },
+  "kolhozen-pazar": {
+    "name": "Колхозен пазар",
+    "lat": 43.2101609,
+    "lon": 27.903147,
+    "source": "nominatim",
+    "verified": true
+  },
+  "konfuto": {
+    "name": "Конфуто",
+    "lat": 43.2197277,
+    "lon": 27.9034334,
+    "source": "nominatim",
+    "verified": true
+  },
+  "levski-1": {
+    "name": "Левски 1",
+    "lat": 43.2196207,
+    "lon": 27.9339792,
+    "source": "nominatim",
+    "verified": true
+  },
+  "levski-2": {
+    "name": "Левски 2",
+    "lat": 43.2206089,
+    "lon": 27.9168485,
+    "source": "nominatim",
+    "verified": true
+  },
+  "lyatno-kino-trakiya": {
+    "name": "Лятно кино Тракия",
+    "lat": 43.2143238,
+    "lon": 27.9065332,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-akchelar": {
+    "name": "м-т Акчелар",
+    "lat": 43.2267971,
+    "lon": 27.9485686,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-alen-mak": {
+    "name": "м-т Ален мак",
+    "lat": 43.2507414,
+    "lon": 28.0228024,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-bokluk-tarla": {
+    "name": "м-т Боклук Тарла",
+    "lat": 43.2395587,
+    "lon": 27.8547925,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-dobreva-cheshma": {
+    "name": "м-т Добрева чешма",
+    "lat": 43.2496761,
+    "lon": 27.9585565,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-dolna-traka": {
+    "name": "м-т Долна Трака",
+    "lat": 43.2237775,
+    "lon": 27.9822957,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-evksinograd": {
+    "name": "м-т Евксиноград",
+    "lat": 43.2188009,
+    "lon": 27.9882953,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-gorna-traka": {
+    "name": "м-т Горна Трака",
+    "lat": 43.231806,
+    "lon": 27.9737556,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-kochmar": {
+    "name": "м-т Кочмар",
+    "lat": 43.2464586,
+    "lon": 27.877456,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-manastirski-rid": {
+    "name": "м-т Манастирски рид",
+    "lat": 43.2420219,
+    "lon": 28.0071437,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-mentesheto": {
+    "name": "м-т Ментешето",
+    "lat": 43.2134,
+    "lon": 27.8833,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "m-t-orehcheto": {
+    "name": "м-т Орехчето",
+    "lat": 43.1843271,
+    "lon": 27.8401566,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-pchelina": {
+    "name": "м-т Пчелина",
+    "lat": 43.2337583,
+    "lon": 27.8973372,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-planova": {
+    "name": "м-т Планова",
+    "lat": 43.2466773,
+    "lon": 27.8693641,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-priboy": {
+    "name": "м-т Прибой",
+    "lat": 43.1469218,
+    "lon": 27.934623,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-rakitnika": {
+    "name": "м-т Ракитника",
+    "lat": 43.1340843,
+    "lon": 27.9270603,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-saltanat": {
+    "name": "м-т Салтанат",
+    "lat": 43.20988,
+    "lon": 27.8893,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "m-t-sotira": {
+    "name": "м-т Сотира",
+    "lat": 43.2247712,
+    "lon": 27.9397477,
+    "source": "nominatim",
+    "verified": true
+  },
+  "m-t-zelenika": {
+    "name": "м-т Зеленика",
+    "lat": 43.1668121,
+    "lon": 27.9249606,
+    "source": "nominatim",
+    "verified": true
+  },
+  "maksuda": {
+    "name": "Максуда",
+    "lat": 43.2111038,
+    "lon": 27.888393,
+    "source": "nominatim",
+    "verified": true
+  },
+  "mladost-1": {
+    "name": "Младост 1",
+    "lat": 43.2319111,
+    "lon": 27.8738485,
+    "source": "nominatim",
+    "verified": true
+  },
+  "mladost-2": {
+    "name": "Младост 2",
+    "lat": 43.2300044,
+    "lon": 27.8854555,
+    "source": "nominatim",
+    "verified": true
+  },
+  "okrazhna-bolnitsa-generali": {
+    "name": "Окръжна болница-Генерали",
+    "lat": 43.207119999999996,
+    "lon": 27.917679999999997,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "operata": {
+    "name": "Операта",
+    "lat": 43.2038282,
+    "lon": 27.9126782,
+    "source": "nominatim",
+    "verified": true
+  },
+  "pobeda": {
+    "name": "Победа",
+    "lat": 43.2253176,
+    "lon": 27.9045734,
+    "source": "nominatim",
+    "verified": true
+  },
+  "pogrebi": {
+    "name": "Погреби",
+    "lat": 43.19352,
+    "lon": 27.9133,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "s-topoli": {
+    "name": "с. Тополи",
+    "lat": 43.2164126,
+    "lon": 27.8212023,
+    "source": "nominatim",
+    "verified": true
+  },
+  "s-zvezditsa": {
+    "name": "с. Звездица",
+    "lat": 43.15509,
+    "lon": 27.83637,
+    "source": "nominatim",
+    "verified": true
+  },
+  "sportna-zala": {
+    "name": "Спортна зала",
+    "lat": 43.2108042,
+    "lon": 27.9316017,
+    "source": "nominatim",
+    "verified": true
+  },
+  "stadion-spartak": {
+    "name": "Стадион Спартак",
+    "lat": 43.2186741,
+    "lon": 27.9123718,
+    "source": "nominatim",
+    "verified": true
+  },
+  "sveti-nikola": {
+    "name": "Свети Никола",
+    "lat": 43.2165809,
+    "lon": 27.9619463,
+    "source": "nominatim",
+    "verified": true
+  },
+  "troshevo": {
+    "name": "Трошево",
+    "lat": 43.2236385,
+    "lon": 27.8837523,
+    "source": "nominatim",
+    "verified": true
+  },
+  "tsentar": {
+    "name": "Център",
+    "lat": 43.2058818,
+    "lon": 27.9098338,
+    "source": "nominatim",
+    "verified": true
+  },
+  "tsentralna-poshta": {
+    "name": "Централна поща",
+    "lat": 43.2066768,
+    "lon": 27.9096262,
+    "source": "nominatim",
+    "verified": true
+  },
+  "tsveten-kvartal": {
+    "name": "Цветен квартал",
+    "lat": 43.2238681,
+    "lon": 27.9138306,
+    "source": "nominatim",
+    "verified": true
+  },
+  "v-z-vinitsa-sever": {
+    "name": "в.з.Виница - север",
+    "lat": 43.2291123,
+    "lon": 27.9768901,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vazrazhdane-1": {
+    "name": "Възраждане 1",
+    "lat": 43.2367218,
+    "lon": 27.8743345,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vazrazhdane-2": {
+    "name": "Възраждане 2",
+    "lat": 43.2360624,
+    "lon": 27.8856536,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vazrazhdane-3": {
+    "name": "Възраждане 3",
+    "lat": 43.2336615,
+    "lon": 27.894174,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vazrazhdane-4": {
+    "name": "Възраждане 4",
+    "lat": 43.2414514,
+    "lon": 27.8764613,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vinitsa": {
+    "name": "Виница",
+    "lat": 43.2291123,
+    "lon": 27.9768901,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vins-cherven-ploshtad": {
+    "name": "ВИНС-Червен площад",
+    "lat": 43.207879999999996,
+    "lon": 27.912699999999997,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "vladislav-varnenchik-1": {
+    "name": "Владислав Варненчик 1",
+    "lat": 43.2414514,
+    "lon": 27.8764613,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vladislav-varnenchik-2": {
+    "name": "Владислав Варненчик 2",
+    "lat": 43.2414514,
+    "lon": 27.8764613,
+    "source": "nominatim",
+    "verified": true
+  },
+  "zapadna-promishlena-zona": {
+    "name": "Западна промишлена зона",
+    "lat": 43.2186994,
+    "lon": 27.8680923,
+    "source": "nominatim",
+    "verified": true
+  },
+  "zavod-druzhba": {
+    "name": "Завод Дружба",
+    "lat": 43.2159009,
+    "lon": 27.9272194,
+    "source": "nominatim",
+    "verified": true
+  },
+  "zhp-gara": {
+    "name": "ЖП Гара",
+    "lat": 43.1991267,
+    "lon": 27.9105735,
+    "source": "nominatim",
+    "verified": true
+  },
+  "zimno-kino-trakiya": {
+    "name": "Зимно кино Тракия",
+    "lat": 43.19668,
+    "lon": 27.92998,
+    "source": "fallback_centroid",
+    "verified": false
+  }
+}

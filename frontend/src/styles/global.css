@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-head);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Set while the mobile nav drawer is open so the page doesn't scroll behind it. */
+body.no-scroll {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 700;
+}
+
+button {
+  font-family: var(--font-head);
+  cursor: pointer;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Chip / label */
+.label {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Print: strip the app chrome (sidebar / mobile header) so deliverables like the
+   research report print as a clean standalone document. Views opt into nicer
+   pagination via their own @media print rules. */
+@media print {
+  @page { size: A4; margin: 16mm; }
+  .shell { display: block !important; }
+  .shell__sidebar,
+  .shell__scrim,
+  .mhead,
+  .cb {
+    display: none !important;
+  }
+  .shell__view {
+    height: auto !important;
+    overflow: visible !important;
+    grid-column: 1 / -1 !important;
+  }
+}
+
+/* Leaflet attribution restyle to match the flat aesthetic */
+.leaflet-container {
+  background: var(--bg);
+  font-family: var(--font-mono);
+}
+.leaflet-control-attribution {
+  background: var(--surface) !important;
+  border: var(--stroke);
+  font-size: 9px !important;
+}

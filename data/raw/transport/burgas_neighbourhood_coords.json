@@ -1,0 +1,205 @@
+{
+  "akatsiite": {
+    "name": "Акациите",
+    "lat": 42.4877789,
+    "lon": 27.4481562,
+    "source": "nominatim",
+    "verified": true
+  },
+  "banevo": {
+    "name": "Банево",
+    "lat": 42.6229768,
+    "lon": 27.3954653,
+    "source": "nominatim_outside_bbox",
+    "verified": false
+  },
+  "bratya-miladinovi": {
+    "name": "Братя Миладинови",
+    "lat": 42.5053595,
+    "lon": 27.4658866,
+    "source": "nominatim",
+    "verified": true
+  },
+  "cherno-more": {
+    "name": "Черно море",
+    "lat": 42.6129362,
+    "lon": 27.4932365,
+    "source": "nominatim",
+    "verified": true
+  },
+  "dolno-ezerovo": {
+    "name": "Долно Езерово",
+    "lat": 42.5164459,
+    "lon": 27.3607132,
+    "source": "nominatim",
+    "verified": true
+  },
+  "gorno-ezerovo": {
+    "name": "Горно Езерово",
+    "lat": 42.4841476,
+    "lon": 27.3787553,
+    "source": "nominatim",
+    "verified": true
+  },
+  "horizont": {
+    "name": "Хоризонт",
+    "lat": 42.4426884,
+    "lon": 27.4875521,
+    "source": "nominatim",
+    "verified": true
+  },
+  "izgrev": {
+    "name": "Изгрев",
+    "lat": 42.5246001,
+    "lon": 27.4613124,
+    "source": "nominatim",
+    "verified": true
+  },
+  "kraymorie": {
+    "name": "Крайморие",
+    "lat": 42.445013,
+    "lon": 27.485961,
+    "source": "nominatim",
+    "verified": true
+  },
+  "lazur": {
+    "name": "Лазур",
+    "lat": 42.5124363,
+    "lon": 27.4703779,
+    "source": "nominatim",
+    "verified": true
+  },
+  "letishte-burgas": {
+    "name": "Летище Бургас",
+    "lat": 42.570221,
+    "lon": 27.5169873,
+    "source": "nominatim",
+    "verified": true
+  },
+  "madika": {
+    "name": "Мадика",
+    "lat": 42.5243427,
+    "lon": 27.4414504,
+    "source": "nominatim",
+    "verified": true
+  },
+  "meden-rudnik-zona-a": {
+    "name": "Меден рудник - зона А",
+    "lat": 42.461334,
+    "lon": 27.4220453,
+    "source": "nominatim",
+    "verified": true
+  },
+  "meden-rudnik-zona-b": {
+    "name": "Меден рудник - зона Б",
+    "lat": 42.4578994,
+    "lon": 27.418896,
+    "source": "nominatim",
+    "verified": true
+  },
+  "meden-rudnik-zona-d": {
+    "name": "Меден рудник - зона Д",
+    "lat": 42.4649899,
+    "lon": 27.4183998,
+    "source": "nominatim",
+    "verified": true
+  },
+  "meden-rudnik-zona-g": {
+    "name": "Меден рудник - зона Г",
+    "lat": 42.4530349,
+    "lon": 27.4130858,
+    "source": "nominatim",
+    "verified": true
+  },
+  "meden-rudnik-zona-v": {
+    "name": "Меден рудник - зона В",
+    "lat": 42.4530349,
+    "lon": 27.4130858,
+    "source": "nominatim",
+    "verified": true
+  },
+  "peti-kilometar": {
+    "name": "Пети километър",
+    "lat": 42.50936,
+    "lon": 27.43854,
+    "source": "fallback_centroid",
+    "verified": false
+  },
+  "pobeda": {
+    "name": "Победа",
+    "lat": 42.5069072,
+    "lon": 27.4575676,
+    "source": "nominatim",
+    "verified": true
+  },
+  "promishlena-zona-sever": {
+    "name": "Промишлена зона - Север",
+    "lat": 42.522059,
+    "lon": 27.4329075,
+    "source": "nominatim",
+    "verified": true
+  },
+  "rudnik": {
+    "name": "Рудник",
+    "lat": 42.4566495,
+    "lon": 27.4160902,
+    "source": "nominatim",
+    "verified": true
+  },
+  "s-ravnets": {
+    "name": "с. Равнец",
+    "lat": 43.68209,
+    "lon": 27.98726,
+    "source": "nominatim_outside_bbox",
+    "verified": false
+  },
+  "sarafovo": {
+    "name": "Сарафово",
+    "lat": 42.5675123,
+    "lon": 27.492716,
+    "source": "nominatim",
+    "verified": true
+  },
+  "slaveykov": {
+    "name": "Славейков",
+    "lat": 42.5199543,
+    "lon": 27.4524303,
+    "source": "nominatim",
+    "verified": true
+  },
+  "svoboda": {
+    "name": "Свобода",
+    "lat": 42.5692167,
+    "lon": 27.3188764,
+    "source": "nominatim_outside_bbox",
+    "verified": false
+  },
+  "tsentar": {
+    "name": "Център",
+    "lat": 42.525009,
+    "lon": 27.4414387,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vazrazhdane": {
+    "name": "Възраждане",
+    "lat": 42.4945047,
+    "lon": 27.4732895,
+    "source": "nominatim",
+    "verified": true
+  },
+  "vetren": {
+    "name": "Ветрен",
+    "lat": 42.602283,
+    "lon": 27.4143756,
+    "source": "nominatim",
+    "verified": true
+  },
+  "zornitsa": {
+    "name": "Зорница",
+    "lat": 42.5147778,
+    "lon": 27.4632821,
+    "source": "nominatim",
+    "verified": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "status": "partial",
+    "note": "Overpass API returned 406 during collection. Transport assignment pending. Re-run fetch_transport.py when Overpass API is available.",
+    "overpass_issue": "HTTP 406 from all overpass-api.de endpoints",
+    "wikidata_partial_metro_stations": [
+      {"name": "Метростанция Летище София",  "line": "M4", "lat": 42.6878, "lon": 23.4161},
+      {"name": "Метростанция Искърско шосе", "line": "M4", "lat": 42.6683, "lon": 23.4022},
+      {"name": "Метростанция Дружба",        "line": "M4", "lat": 42.6583, "lon": 23.3944},
+      {"name": "Стадион Васил Левски",       "line": "M1", "lat": 42.6858, "lon": 23.3325},
+      {"name": "Стадион Васил Левски",       "line": "M4", "lat": 42.6858, "lon": 23.3325},
+      {"name": "Хаджи Димитър",              "line": "M3", "lat": 42.7021, "lon": 23.3516},
+      {"name": "Театрална",                  "line": "M3", "lat": 42.6974, "lon": 23.3469},
+      {"name": "Орлов мост",                 "line": "M3", "lat": 42.6906, "lon": 23.3362}
+    ],
+    "geocoded_coords_file": "sofia_neighbourhood_coords.json",
+    "coords_needs_review": ["lyulin-1", "lyulin-7", "yavorov", "lagera", "banishora", "druzhba-1"]
+  }
+}

@@ -1,0 +1,57 @@
+name: Deploy to VPS
+
+# Auto-deploy PocketBroker on every push to main: SSH into the VPS and run the
+# server-side deploy.sh (git pull → build frontend → rsync → pip → alembic → restart).
+# Also runnable manually from the Actions tab (workflow_dispatch).
+#
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   VPS_HOST     app.example.com
+#   VPS_USER     deploy
+#   VPS_SSH_KEY  private key of a dedicated deploy keypair (see deploy/CI.md)
+#   VPS_PORT     optional; defaults to 22
+# Server prerequisites (one-time) are documented in deploy/CI.md.
+
+# Manual-only in this public mirror: no deploy secrets are configured here,
+# so an automatic push-trigger would only ever fail. The private repo runs
+# this on every push to main.
+on:
+  workflow_dispatch:
+
+# Never run two deploys at once; let an in-flight one finish before the next.
+concurrency:
+  group: deploy-vps
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy over SSH
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_PORT: ${{ secrets.VPS_PORT }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${VPS_HOST}" ] || [ -z "${VPS_USER}" ] || [ -z "${VPS_SSH_KEY}" ]; then
+            echo "::error::Missing required secrets (VPS_HOST, VPS_USER, VPS_SSH_KEY). See deploy/CI.md."
+            exit 1
+          fi
+
+          # Write the deploy key to a temp file with locked-down perms.
+          KEY_FILE="$(mktemp)"
+          chmod 600 "$KEY_FILE"
+          printf '%s\n' "${VPS_SSH_KEY}" > "$KEY_FILE"
+          trap 'rm -f "$KEY_FILE"' EXIT
+
+          PORT="${VPS_PORT:-22}"
+
+          echo "==> Connecting to ${VPS_USER}@${VPS_HOST}:${PORT} and running deploy.sh"
+          ssh -o StrictHostKeyChecking=accept-new \
+              -o BatchMode=yes \
+              -i "$KEY_FILE" \
+              -p "$PORT" \
+              "${VPS_USER}@${VPS_HOST}" \
+              'bash /home/deploy/projects/bg-realestate-intel/deploy.sh'

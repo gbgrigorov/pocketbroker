@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" font-family="'Barlow Condensed','Arial Narrow',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#0d0d0d"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="940" height="560" fill="#F5EED9"/>
+
+  <!-- caption -->
+  <text x="40" y="44" font-size="13" letter-spacing="2" fill="#0d0d0d" font-weight="700">OWNERSHIP&#160;&#215;&#160;EVIDENCE&#160;&#8212;&#160;ONE DEVELOPER, MAPPED</text>
+  <line x1="40" y1="54" x2="900" y2="54" stroke="#0d0d0d" stroke-width="2"/>
+
+  <!-- ============ OWNERSHIP EDGES (drawn first, under nodes) ============ -->
+  <!-- UBO -> Holding -->
+  <line x1="150" y1="128" x2="150" y2="150" stroke="#0d0d0d" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Holding -> Brand -->
+  <line x1="150" y1="210" x2="150" y2="236" stroke="#0d0d0d" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Brand -> SPVs -->
+  <path d="M120,316 L94,366" stroke="#0d0d0d" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M165,318 L242,366" stroke="#0d0d0d" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M205,316 L388,366" stroke="#0d0d0d" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <!-- Co-manager (dashed = management) -> Brand and disputed SPV -->
+  <path d="M430,178 L250,272" stroke="#0d0d0d" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <path d="M438,180 L420,366" stroke="#0d0d0d" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+
+  <!-- edge % labels -->
+  <g font-size="12" font-weight="700" fill="#0d0d0d">
+    <rect x="158" y="130" width="40" height="18" fill="#F5EED9"/><text x="162" y="143">100%</text>
+    <rect x="158" y="214" width="40" height="18" fill="#F5EED9"/><text x="162" y="227">owns</text>
+  </g>
+
+  <!-- ============ NODES ============ -->
+  <!-- UBO person (coral circle) -->
+  <circle cx="154" cy="84" r="36" fill="#0d0d0d"/>
+  <circle cx="150" cy="80" r="36" fill="#ff6b47" stroke="#0d0d0d" stroke-width="2"/>
+  <text x="150" y="86" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">UBO</text>
+  <text x="150" y="136" text-anchor="middle" font-size="14" font-weight="700" fill="#0d0d0d">Ultimate owner&#160;(person)</text>
+
+  <!-- Holding (blue) -->
+  <rect x="84" y="154" width="136" height="48" fill="#0d0d0d"/>
+  <rect x="80" y="150" width="136" height="48" fill="#2b6bff" stroke="#0d0d0d" stroke-width="2"/>
+  <text x="148" y="180" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">HOLDING&#160;&#1045;&#1054;&#1054;&#1044;</text>
+
+  <!-- Brand / builder (pink) -->
+  <rect x="74" y="240" width="172" height="58" fill="#0d0d0d"/>
+  <rect x="70" y="236" width="172" height="58" fill="#ff3366" stroke="#0d0d0d" stroke-width="2"/>
+  <text x="156" y="262" text-anchor="middle" font-size="19" font-weight="800" fill="#fff">BRAND</text>
+  <text x="156" y="282" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">licensed builder</text>
+
+  <!-- Co-manager person (coral circle) -->
+  <circle cx="434" cy="154" r="30" fill="#0d0d0d"/>
+  <circle cx="430" cy="150" r="30" fill="#ff6b47" stroke="#0d0d0d" stroke-width="2"/>
+  <text x="430" y="155" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">MGR</text>
+  <text x="430" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#0d0d0d">Co-manager&#160;(shared)</text>
+
+  <!-- SPV A -->
+  <rect x="34" y="370" width="120" height="46" fill="#0d0d0d"/>
+  <rect x="30" y="366" width="120" height="46" fill="#2b6bff" stroke="#0d0d0d" stroke-width="2"/>
+  <text x="90" y="389" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">SPV</text>
+  <text x="90" y="404" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Project A</text>
+
+  <!-- SPV B -->
+  <rect x="186" y="370" width="120" height="46" fill="#0d0d0d"/>
+  <rect x="182" y="366" width="120" height="46" fill="#2b6bff" stroke="#0d0d0d" stroke-width="2"/>
+  <text x="242" y="389" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">SPV</text>
+  <text x="242" y="404" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Project B</text>
+
+  <!-- SPV C — disputed (teal highlight) -->
+  <rect x="338" y="370" width="132" height="46" fill="#0d0d0d"/>
+  <rect x="334" y="366" width="132" height="46" fill="#2b6bff" stroke="#00d4cc" stroke-width="4"/>
+  <text x="400" y="388" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">SPV&#160;&#9888;</text>
+  <text x="400" y="403" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Project C&#160;(disputed)</text>
+
+  <!-- dashed connector: disputed SPV -> evidence notes -->
+  <path d="M466,386 C540,380 540,250 596,250" stroke="#0d0d0d" stroke-width="2" fill="none" stroke-dasharray="6 5"/>
+  <circle cx="466" cy="386" r="3.5" fill="#0d0d0d"/>
+
+  <!-- ============ EVIDENCE NOTES ============ -->
+  <text x="600" y="92" font-size="13" letter-spacing="1" font-weight="700" fill="#0d0d0d">EVIDENCE ATTACHED TO THIS COMPANY</text>
+
+  <!-- Official record (pink header) -->
+  <rect x="604" y="106" width="296" height="104" fill="#0d0d0d"/>
+  <rect x="600" y="102" width="296" height="104" fill="#fff" stroke="#0d0d0d" stroke-width="2"/>
+  <rect x="600" y="102" width="296" height="28" fill="#ff3366" stroke="#0d0d0d" stroke-width="2"/>
+  <text x="612" y="122" font-size="14" font-weight="800" fill="#fff">OFFICIAL RECORD</text>
+  <text x="612" y="152" font-size="14" font-weight="700" fill="#0d0d0d">Court act &#8212; Appellate Court</text>
+  <text x="612" y="172" font-size="12" fill="#333">civil case &#183; names the company by &#1045;&#1048;&#1050;</text>
+  <text x="612" y="192" font-size="11" font-style="italic" fill="#777">governmental court-acts registry</text>
+
+  <!-- Community report (coral header) -->
+  <rect x="604" y="226" width="296" height="104" fill="#0d0d0d"/>
+  <rect x="600" y="222" width="296" height="104" fill="#fff" stroke="#0d0d0d" stroke-width="2"/>
+  <rect x="600" y="222" width="296" height="28" fill="#ff6b47" stroke="#0d0d0d" stroke-width="2"/>
+  <text x="612" y="242" font-size="14" font-weight="800" fill="#fff">COMMUNITY REPORT</text>
+  <text x="612" y="272" font-size="14" font-weight="700" fill="#0d0d0d">Buyer forum thread</text>
+  <text x="612" y="292" font-size="12" fill="#333">&#8220;contract cancelled, flat re-sold&#8221;</text>
+  <text x="612" y="312" font-size="11" font-style="italic" fill="#777">forum search</text>
+
+  <!-- Web mention (neutral header) -->
+  <rect x="604" y="346" width="296" height="104" fill="#0d0d0d"/>
+  <rect x="600" y="342" width="296" height="104" fill="#fff" stroke="#0d0d0d" stroke-width="2"/>
+  <rect x="600" y="342" width="296" height="28" fill="#c4c4c4" stroke="#0d0d0d" stroke-width="2"/>
+  <text x="612" y="362" font-size="14" font-weight="800" fill="#0d0d0d">WEB MENTION</text>
+  <text x="612" y="392" font-size="14" font-weight="700" fill="#0d0d0d">News investigation</text>
+  <text x="612" y="412" font-size="12" fill="#333">&#8220;off-plan buyers left without homes&#8221;</text>
+  <text x="612" y="432" font-size="11" font-style="italic" fill="#777">web &amp; news search</text>
+
+  <!-- legend -->
+  <g font-size="12" font-weight="700" fill="#0d0d0d">
+    <circle cx="52" cy="500" r="8" fill="#ff6b47" stroke="#0d0d0d" stroke-width="2"/>
+    <text x="68" y="504">Person</text>
+    <rect x="150" y="492" width="16" height="16" fill="#2b6bff" stroke="#0d0d0d" stroke-width="2"/>
+    <text x="172" y="504">Company / SPV</text>
+    <rect x="300" y="492" width="16" height="16" fill="#ff3366" stroke="#0d0d0d" stroke-width="2"/>
+    <text x="322" y="504">Brand / builder</text>
+    <line x1="452" y1="500" x2="486" y2="500" stroke="#0d0d0d" stroke-width="2"/>
+    <text x="492" y="504">owns</text>
+    <line x1="556" y1="500" x2="590" y2="500" stroke="#0d0d0d" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="596" y="504">manages</text>
+  </g>
+</svg>

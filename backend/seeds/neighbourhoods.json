@@ -1,0 +1,996 @@
+[
+  {
+    "slug": "7-mi-11-ti-kilometar",
+    "name": "7-ми 11-ти километър",
+    "lat": 42.6510058,
+    "lon": 23.3923065,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "bakston",
+    "name": "Бъкстон",
+    "lat": 42.6730192,
+    "lon": 23.2779464,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "banishora",
+    "name": "Банишора",
+    "lat": 42.7091815,
+    "lon": 23.3062985,
+    "coord_source": "nominatim_bounded_reverse_confirmed"
+  },
+  {
+    "slug": "belite-brezi",
+    "name": "Белите брези",
+    "lat": 42.7711849,
+    "lon": 23.3994772,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "benkovski",
+    "name": "Бенковски",
+    "lat": 42.7419908,
+    "lon": 23.3391638,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "borovo",
+    "name": "Борово",
+    "lat": 42.6698669,
+    "lon": 23.2871581,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "botunets",
+    "name": "Ботунец",
+    "lat": 42.7421868,
+    "lon": 23.5178641,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "botunets-2",
+    "name": "Ботунец 2",
+    "lat": 42.736358,
+    "lon": 23.5146897,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "boyana",
+    "name": "Бояна",
+    "lat": 42.6491707,
+    "lon": 23.2616032,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "darvenitsa",
+    "name": "Дървеница",
+    "lat": 42.6532996,
+    "lon": 23.3618316,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "dianabad",
+    "name": "Дианабад",
+    "lat": 42.6659936,
+    "lon": 23.3459787,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "doktorski-pametnik",
+    "name": "Докторски паметник",
+    "lat": 42.6945013,
+    "lon": 23.3384325,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "dragalevtsi",
+    "name": "Драгалевци",
+    "lat": 42.6307354,
+    "lon": 23.3136947,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "druzhba-1",
+    "name": "Дружба 1",
+    "lat": 42.6549028,
+    "lon": 23.4007958,
+    "coord_source": "nominatim_bounded_reverse_confirmed"
+  },
+  {
+    "slug": "druzhba-2",
+    "name": "Дружба 2",
+    "lat": 42.6484263,
+    "lon": 23.4077938,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "eksperimentalen",
+    "name": "Експериментален",
+    "lat": 42.6300485,
+    "lon": 23.3987291,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "fakulteta",
+    "name": "Факултета",
+    "lat": 42.6983044,
+    "lon": 23.2726242,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "filipovtsi",
+    "name": "Филиповци",
+    "lat": 42.7198967,
+    "lon": 23.2216398,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "fondovi-zhilishta",
+    "name": "Фондови жилища",
+    "lat": 42.7531693,
+    "lon": 23.3290706,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "geo-milev",
+    "name": "Гео Милев",
+    "lat": 42.6810325,
+    "lon": 23.3709729,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "gevgeliyski",
+    "name": "Гевгелийски",
+    "lat": 42.7085361,
+    "lon": 23.2814799,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "gorna-banya",
+    "name": "Горна баня",
+    "lat": 42.6831167,
+    "lon": 23.2417296,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "gorublyane",
+    "name": "Горубляне",
+    "lat": 42.6301693,
+    "lon": 23.4085821,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "gotse-delchev",
+    "name": "Гоце Делчев",
+    "lat": 42.719895,
+    "lon": 23.2606969,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "gr-bankya",
+    "name": "гр. Банкя",
+    "lat": 42.7101251,
+    "lon": 23.1464966,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "gr-novi-iskar",
+    "name": "гр. Нови Искър",
+    "lat": 42.8143844,
+    "lon": 23.3582609,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "gradina",
+    "name": "Градина",
+    "lat": 42.6468128,
+    "lon": 23.2957162,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "hadzhi-dimitar",
+    "name": "Хаджи Димитър",
+    "lat": 42.7025457,
+    "lon": 23.3522642,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "hipodruma",
+    "name": "Хиподрума",
+    "lat": 42.682481,
+    "lon": 23.2950034,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "hladilnika",
+    "name": "Хладилника",
+    "lat": 42.6621556,
+    "lon": 23.3212514,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "ilinden",
+    "name": "Илинден",
+    "lat": 42.7125459,
+    "lon": 23.2875772,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "iliyantsi",
+    "name": "Илиянци",
+    "lat": 42.7514314,
+    "lon": 23.3270304,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "ivan-vazov",
+    "name": "Иван Вазов",
+    "lat": 42.6779175,
+    "lon": 23.308493,
+    "coord_source": "osm_suburb"
+  },
+  {
+    "slug": "izgrev",
+    "name": "Изгрев",
+    "lat": 42.6704814,
+    "lon": 23.3517945,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "iztok",
+    "name": "Изток",
+    "lat": 42.6564296,
+    "lon": 23.4693193,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "karpuzitsa",
+    "name": "Карпузица",
+    "lat": 42.666117,
+    "lon": 23.2478948,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "knyazhevo",
+    "name": "Княжево",
+    "lat": 42.6586899,
+    "lon": 23.2404891,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "krasna-polyana-1",
+    "name": "Красна поляна 1",
+    "lat": 42.6981921,
+    "lon": 23.2824573,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "krasna-polyana-2",
+    "name": "Красна поляна 2",
+    "lat": 42.6943112,
+    "lon": 23.2798074,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "krasna-polyana-3",
+    "name": "Красна поляна 3",
+    "lat": 42.6921557,
+    "lon": 23.2829404,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "krasno-selo",
+    "name": "Красно село",
+    "lat": 42.6810597,
+    "lon": 23.2877979,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "krastova-vada",
+    "name": "Кръстова вада",
+    "lat": 42.6446852,
+    "lon": 23.3058285,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "kremikovtsi",
+    "name": "Кремиковци",
+    "lat": 42.7697292,
+    "lon": 23.5439022,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "lagera",
+    "name": "Лагера",
+    "lat": 42.6843984,
+    "lon": 23.2927007,
+    "coord_source": "nominatim_bounded"
+  },
+  {
+    "slug": "letishte-sofiya",
+    "name": "Летище София",
+    "lat": 42.6879741,
+    "lon": 23.4161918,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "levski",
+    "name": "Левски",
+    "lat": 42.6875707,
+    "lon": 23.3352431,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "levski-g",
+    "name": "Левски Г",
+    "lat": 42.7131528,
+    "lon": 23.3824364,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "levski-v",
+    "name": "Левски В",
+    "lat": 42.7075514,
+    "lon": 23.3853872,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "lozenets",
+    "name": "Лозенец",
+    "lat": 42.6597151,
+    "lon": 23.3250228,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "lyulin-1",
+    "name": "Люлин 1",
+    "lat": 42.7286532,
+    "lon": 23.2541755,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-10",
+    "name": "Люлин 10",
+    "lat": 42.7151386,
+    "lon": 23.2729747,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-2",
+    "name": "Люлин 2",
+    "lat": 42.7256471,
+    "lon": 23.2501109,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-3",
+    "name": "Люлин 3",
+    "lat": 42.7211722,
+    "lon": 23.2466247,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-4",
+    "name": "Люлин 4",
+    "lat": 42.717806,
+    "lon": 23.2433086,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-5",
+    "name": "Люлин 5",
+    "lat": 42.7151687,
+    "lon": 23.2387044,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-6",
+    "name": "Люлин 6",
+    "lat": 42.7116178,
+    "lon": 23.2526458,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-7",
+    "name": "Люлин 7",
+    "lat": 42.7123561,
+    "lon": 23.2634533,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-8",
+    "name": "Люлин 8",
+    "lat": 42.7215633,
+    "lon": 23.2611076,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-9",
+    "name": "Люлин 9",
+    "lat": 42.7190099,
+    "lon": 23.2664709,
+    "coord_source": "osm_quarter"
+  },
+  {
+    "slug": "lyulin-tsentar",
+    "name": "Люлин - център",
+    "lat": 42.7167738,
+    "lon": 23.2543368,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "m-t-detski-grad",
+    "name": "м-т Детски град",
+    "lat": 42.6085724,
+    "lon": 23.3996834,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "m-t-gardova-glava",
+    "name": "м-т Гърдова глава",
+    "lat": 42.6575108,
+    "lon": 23.2600104,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "m-t-kambanite",
+    "name": "м-т Камбаните",
+    "lat": 42.6184656,
+    "lon": 23.3792376,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "malashevtsi",
+    "name": "Малашевци",
+    "lat": 42.7167346,
+    "lon": 23.3597746,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "malinova-dolina",
+    "name": "Малинова долина",
+    "lat": 42.6340931,
+    "lon": 23.3480004,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "manastirski-livadi",
+    "name": "Манастирски ливади",
+    "lat": 42.6616709,
+    "lon": 23.2795633,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "meditsinska-akademiya",
+    "name": "Медицинска академия",
+    "lat": 42.6855,
+    "lon": 23.321,
+    "coord_source": "manual_approx"
+  },
+  {
+    "slug": "mladost-1",
+    "name": "Младост 1",
+    "lat": 42.6529948,
+    "lon": 23.3733445,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "mladost-1a",
+    "name": "Младост 1А",
+    "lat": 42.649804,
+    "lon": 23.3824361,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "mladost-2",
+    "name": "Младост 2",
+    "lat": 42.644237,
+    "lon": 23.3699601,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "mladost-3",
+    "name": "Младост 3",
+    "lat": 42.6465261,
+    "lon": 23.3837288,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "mladost-4",
+    "name": "Младост 4",
+    "lat": 42.6297655,
+    "lon": 23.3779435,
+    "coord_source": "osm_boundary"
+  },
+  {
+    "slug": "moderno-predgradie",
+    "name": "Модерно предградие",
+    "lat": 42.7316671,
+    "lon": 23.2569505,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "musagenitsa",
+    "name": "Мусагеница",
+    "lat": 42.658552,
+    "lon": 23.3644139,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "nadezhda-1",
+    "name": "Надежда 1",
+    "lat": 42.7264447,
+    "lon": 23.2965083,
+    "coord_source": "osm_boundary"
+  },
+  {
+    "slug": "nadezhda-2",
+    "name": "Надежда 2",
+    "lat": 42.7300597,
+    "lon": 23.3047222,
+    "coord_source": "osm_boundary"
+  },
+  {
+    "slug": "nadezhda-3",
+    "name": "Надежда 3",
+    "lat": 42.7307325,
+    "lon": 23.2903019,
+    "coord_source": "osm_boundary"
+  },
+  {
+    "slug": "nadezhda-4",
+    "name": "Надежда 4",
+    "lat": 42.7352717,
+    "lon": 23.3006661,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "npz-sredets",
+    "name": "НПЗ Средец",
+    "lat": 42.6875952,
+    "lon": 23.335644,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "obelya",
+    "name": "Обеля",
+    "lat": 42.7406882,
+    "lon": 23.2761026,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "obelya-1",
+    "name": "Обеля 1",
+    "lat": 42.7389484,
+    "lon": 23.269715,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "obelya-2",
+    "name": "Обеля 2",
+    "lat": 42.7456621,
+    "lon": 23.2758285,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "oborishte",
+    "name": "Оборище",
+    "lat": 42.69591,
+    "lon": 23.3430167,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "orlandovtsi",
+    "name": "Орландовци",
+    "lat": 42.7229289,
+    "lon": 23.3431958,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "ovcha-kupel",
+    "name": "Овча купел",
+    "lat": 42.6774732,
+    "lon": 23.2052117,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "ovcha-kupel-1",
+    "name": "Овча купел 1",
+    "lat": 42.672,
+    "lon": 23.2709,
+    "coord_source": "nominatim_bounded"
+  },
+  {
+    "slug": "ovcha-kupel-2",
+    "name": "Овча купел 2",
+    "lat": 42.6816089,
+    "lon": 23.2469064,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "pavlovo",
+    "name": "Павлово",
+    "lat": 42.6654864,
+    "lon": 23.269969,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "poduyane",
+    "name": "Подуяне",
+    "lat": 42.7070508,
+    "lon": 23.3686699,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "poligona",
+    "name": "Полигона",
+    "lat": 42.6640169,
+    "lon": 23.3794727,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "pz-hladilnika",
+    "name": "ПЗ Хладилника",
+    "lat": 42.6621556,
+    "lon": 23.3212514,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "razsadnika",
+    "name": "Разсадника",
+    "lat": 42.6966549,
+    "lon": 23.290774,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "reduta",
+    "name": "Редута",
+    "lat": 42.6896572,
+    "lon": 23.3640726,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-bistritsa",
+    "name": "с. Бистрица",
+    "lat": 42.5861626,
+    "lon": 23.3601017,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-busmantsi",
+    "name": "с. Бусманци",
+    "lat": 42.6759007,
+    "lon": 23.4330356,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-german",
+    "name": "с. Герман",
+    "lat": 42.6117101,
+    "lon": 23.4127002,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-ivanyane",
+    "name": "с. Иваняне",
+    "lat": 42.70577,
+    "lon": 23.18186,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-kazichene",
+    "name": "с. Казичене",
+    "lat": 42.6615301,
+    "lon": 23.4621214,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-kokalyane",
+    "name": "с. Кокаляне",
+    "lat": 42.58238,
+    "lon": 23.41601,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-lozen",
+    "name": "с. Лозен",
+    "lat": 42.6018838,
+    "lon": 23.4872037,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-malo-buchino",
+    "name": "с. Мало Бучино",
+    "lat": 42.6843695,
+    "lon": 23.1616478,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-pancharevo",
+    "name": "с. Панчарево",
+    "lat": 42.5944337,
+    "lon": 23.4054539,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-vladaya",
+    "name": "с. Владая",
+    "lat": 42.62938,
+    "lon": 23.19465,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-voluyak",
+    "name": "с. Волуяк",
+    "lat": 42.7737987,
+    "lon": 23.2430142,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-yana",
+    "name": "с. Яна",
+    "lat": 42.7309314,
+    "lon": 23.5579248,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "s-zhelyava",
+    "name": "с. Желява",
+    "lat": 42.7470767,
+    "lon": 23.604195,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "serdika",
+    "name": "Сердика",
+    "lat": 42.6977028,
+    "lon": 23.3217359,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "simeonovo",
+    "name": "Симеоново",
+    "lat": 42.672111,
+    "lon": 23.3341889,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "slatina",
+    "name": "Слатина",
+    "lat": 42.686838,
+    "lon": 23.3990441,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "slaviya",
+    "name": "Славия",
+    "lat": 42.6774855,
+    "lon": 23.2764429,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "strelbishte",
+    "name": "Стрелбище",
+    "lat": 42.6728702,
+    "lon": 23.3000224,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "studentski-grad",
+    "name": "Студентски град",
+    "lat": 42.6459527,
+    "lon": 23.3336685,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "suhata-reka",
+    "name": "Сухата река",
+    "lat": 42.6280726,
+    "lon": 23.3325542,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "suhodol",
+    "name": "Суходол",
+    "lat": 42.7180004,
+    "lon": 23.2849925,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "sveta-troitsa",
+    "name": "Света Троица",
+    "lat": 42.6700093,
+    "lon": 23.3134102,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "svoboda",
+    "name": "Свобода",
+    "lat": 42.7722684,
+    "lon": 23.2432384,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "tolstoy",
+    "name": "Толстой",
+    "lat": 42.7264159,
+    "lon": 23.3100462,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "triagalnika",
+    "name": "Триъгълника",
+    "lat": 42.721685,
+    "lon": 23.304186,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "tsentar",
+    "name": "Център",
+    "lat": 42.69679,
+    "lon": 23.3208549,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "v-z-amerikanski-kolezh",
+    "name": "в.з.Американски колеж",
+    "lat": 42.626872,
+    "lon": 23.3633042,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "v-z-bunkera",
+    "name": "в.з.Бункера",
+    "lat": 42.609331,
+    "lon": 23.366304,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "v-z-kinotsentara",
+    "name": "в.з.Киноцентъра",
+    "lat": 42.6303438,
+    "lon": 23.3132477,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "v-z-kinotsentara-3-chast",
+    "name": "в.з.Киноцентъра 3 част",
+    "lat": 42.6285,
+    "lon": 23.317,
+    "coord_source": "manual_approx"
+  },
+  {
+    "slug": "v-z-malinova-dolina",
+    "name": "в.з.Малинова долина",
+    "lat": 42.6340931,
+    "lon": 23.3480004,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "v-z-malinova-dolina-gerena",
+    "name": "в.з.Малинова долина - Герена",
+    "lat": 42.6116695,
+    "lon": 23.3723767,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "v-z-simeonovo-dragalevtsi",
+    "name": "в.з.Симеоново - Драгалевци",
+    "lat": 42.6397489,
+    "lon": 23.3159929,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "v-z-vrana-german",
+    "name": "в.з.Врана - Герман",
+    "lat": 42.6323928,
+    "lon": 23.4217336,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "v-z-vrana-lozen",
+    "name": "в.з.Врана - Лозен",
+    "lat": 42.6409562,
+    "lon": 23.4327573,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "vitosha",
+    "name": "Витоша",
+    "lat": 42.6167377,
+    "lon": 23.2742293,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "voenna-rampa",
+    "name": "Военна рампа",
+    "lat": 42.7287781,
+    "lon": 23.3221176,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "vrabnitsa-1",
+    "name": "Връбница 1",
+    "lat": 42.7341763,
+    "lon": 23.2871257,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "vrabnitsa-2",
+    "name": "Връбница 2",
+    "lat": 42.7396774,
+    "lon": 23.2922429,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "vrazhdebna",
+    "name": "Враждебна",
+    "lat": 42.6955647,
+    "lon": 23.4142083,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "yavorov",
+    "name": "Яворов",
+    "lat": 42.6849892,
+    "lon": 23.348282,
+    "coord_source": "nominatim_bounded"
+  },
+  {
+    "slug": "zaharna-fabrika",
+    "name": "Захарна фабрика",
+    "lat": 42.7131192,
+    "lon": 23.291349,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "zapaden-park",
+    "name": "Западен парк",
+    "lat": 42.7119828,
+    "lon": 23.2690519,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "zh-gr-yuzhen-park",
+    "name": "ж.гр.Южен парк",
+    "lat": 42.6730342,
+    "lon": 23.3074581,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "zh-gr-zoopark",
+    "name": "ж.гр.Зоопарк",
+    "lat": 42.6582061,
+    "lon": 23.3315156,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "zona-b-18",
+    "name": "Зона Б-18",
+    "lat": 42.7040231,
+    "lon": 23.3029055,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "zona-b-19",
+    "name": "Зона Б-19",
+    "lat": 42.6980072,
+    "lon": 23.2990189,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "zona-b-5",
+    "name": "Зона Б-5",
+    "lat": 42.6972583,
+    "lon": 23.3075478,
+    "coord_source": "nominatim"
+  },
+  {
+    "slug": "zona-b-5-3",
+    "name": "Зона Б-5-3",
+    "lat": 42.6968207,
+    "lon": 23.3110307,
+    "coord_source": "nominatim"
+  }
+]

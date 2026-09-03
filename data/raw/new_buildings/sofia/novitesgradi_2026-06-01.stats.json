@@ -1,0 +1,12 @@
+{
+  "domain": "new_buildings",
+  "site": "novitesgradi",
+  "scope": "sofia",
+  "pages_fetched": 6,
+  "bytes_downloaded": 1575665,
+  "records_parsed": 5,
+  "records_emitted": 5,
+  "errors": 0,
+  "duration_s": 18.81,
+  "started_at": "2026-06-01T01:07:48.529551+00:00"
+}

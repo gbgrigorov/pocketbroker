@@ -1,0 +1,5 @@
+{"uid": 5965, "lat": 43.224, "lon": 27.976, "city": "varna", "source": "citizen", "year": 2019, "season": "winter", "pm25": 17.02, "aqi": 61.0}
+{"uid": 9763, "lat": 43.214, "lon": 27.936, "city": "varna", "source": "citizen", "year": 2019, "season": "winter", "pm25": 18.33, "aqi": 64.0}
+{"uid": 5965, "lat": 43.224, "lon": 27.976, "city": "varna", "source": "citizen", "year": 2019, "season": "summer", "pm25": 8.36, "aqi": 35.0}
+{"uid": 9763, "lat": 43.214, "lon": 27.936, "city": "varna", "source": "citizen", "year": 2019, "season": "summer", "pm25": 4.33, "aqi": 18.0}
+{"uid": 28313, "lat": 43.20437735727, "lon": 27.89940154549, "city": "varna", "source": "citizen", "year": 2019, "season": "summer", "pm25": 8.4, "aqi": 35.0}

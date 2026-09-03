@@ -1,0 +1,14 @@
+# legalacts court-acts shortlist — one `eik<TAB>name` per line.
+# Lines starting with # are ignored.
+175155346	АРТЕКС ИНЖЕНЕРИНГ АД
+# ТОБО brand (2 acts already loaded; re-run to verify pipeline)
+831301080	ТОБО
+# ТОБО SPVs — all owned by Димитър Тодоров Димитров
+206564419	ТОБО НАДЕЖДА
+206631736	ТОБО БАУЧЕР
+204916220	ТОБО ЗАПАД
+205221129	ТОБО РИД
+204677069	ТОБО ЛЮЛИН
+205389059	ТОБО МЕТРО
+206993176	ТОБО ЦВЕТНИЦА
+207216255	ТОБО ПРЕЗИДЕНТ
